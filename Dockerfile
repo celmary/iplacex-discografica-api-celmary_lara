@@ -9,7 +9,8 @@ RUN gradle clean bootJar --no-daemon
 
 
 # PARTE 2: Ejecución de la aplicación
-FROM openjdk:21-jdk-oraclelinux8
+# se utiliza amazon coretto basada en openjdk porque las imagenes directas de openjdk estan deprecadas en docker hub
+FROM amazoncorretto:21
 
 WORKDIR /app
 
